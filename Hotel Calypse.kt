@@ -77,10 +77,10 @@ fun reservaQuartos() {
     while (menuPrincipal) {
         println("[Reservas]")
         print("Informe o valor da diária: ")
-        val valorDiaria = readln().toDoubleOrNull() ?: -1.0
+        val valorDiaria = readln().toDoubleOrNull() ?: 1.0
 
         print("Informe a quantidade de diárias (1-30): ")
-        val qtdDiarias = readln().toIntOrNull() ?: -1
+        val qtdDiarias = readln().toIntOrNull() ?: 1
 
         // Validação das diárias de acordo com os requisitos
         if (valorDiaria <= 0 || qtdDiarias !in 1..30) {
@@ -332,7 +332,7 @@ fun eventos(): Double {
     // 6.1 Parte A- Capacidade e seleção de auditório
     println("Eventos")
     print("Informe o número de convidados: ")
-    val convidados = readln().toIntOrNull() ?: -1
+    val convidados = readln().toIntOrNull() ?: 1
 
     if (convidados <= 0 || convidados > 350) {
         println("Número de convidados inválido.")
